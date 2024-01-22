@@ -46,8 +46,8 @@ ORDER BY
     """
 
 # Download and store the SDE locally (for testing and debugging)
-# r = requests.get(link, allow_redirects=True)
-# open("sqlite-latest.sqlite", "wb").write(bz2.decompress(r.content))
+r = requests.get(link, allow_redirects=True)
+open("sqlite-latest.sqlite", "wb").write(bz2.decompress(r.content))
 
 # SQLite connection
 conn = sqlite3.connect("sqlite-latest.sqlite")
